@@ -1,0 +1,126 @@
+.lightbox {
+	animation: lightboxIn 0.5s;
+	background-color: rgba(255, 253, 253, 0.9);
+	height: 100%;
+	left: 0;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	z-index: 10;
+}
+
+.lightbox__container {
+	align-items: center;
+	color: $oldbrick;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	margin-left: 50px;
+	margin-right: 50px;
+	min-height: 100vh;
+	padding: 0rem;
+	text-align: center;
+}
+
+.lightbox__container {
+	img,
+	video {
+		animation: lightboxIn 0.5s;
+		width: 400px;
+		height: 300px;
+		object-fit: cover;
+	}
+}
+
+.lightbox__next,
+.lightbox__previous {
+	background: url(../assets/icons/arrow-right.svg) center center / 100% 100%;
+	border: none;
+	cursor: pointer;
+	height: 100%;
+	margin: -22px 10px;
+	position: fixed;
+	right: 0;
+	text-indent: -10000px;
+	top: 0;
+	width: 36px;
+}
+
+.lightbox__next:hover,
+.lightbox__previous:hover {
+	opacity: 1;
+}
+
+.lightbox__previous {
+	right: auto;
+	left: 0;
+	transform: rotate(180deg);
+}
+
+.lightbox__close {
+	background: url(../assets/icons/cross.svg) center center / 100% 100% no-repeat;
+	border: none;
+	height: 40px;
+	position: fixed;
+	right: 20px;
+	top: 20px;
+	width: 40px;
+	z-index: 12;
+}
+
+.lightbox button {
+	cursor: pointer;
+	opacity: 0.7;
+	text-indent: -10000px;
+	transition: opacity 0.3s;
+}
+
+.lightbox button:hover {
+	opacity: 1;
+}
+
+.lightbox__loader {
+	background: url(../assets/icons/loader.svg) center center no-repeat;
+	height: 40px;
+	opacity: 0.4;
+	width: 40px;
+}
+
+.lightbox.fadeOut {
+	-moz-transition: opacity 0.6s ease-in-out;
+	-ms-transition: opacity 0.6s ease-in-out;
+	-o-transition: opacity 0.6s ease-in-out;
+	-webkit-transion: opacity 0.6s ease-in-out;
+	opacity: 0;
+	transition: opacity 0.6s ease-in-out;
+}
+
+@keyframes lightboxIn {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: $mediumdevices) {
+	.lightbox__container {
+		img,
+		video {
+			height: 450px;
+			width: 800px;
+		}
+	}
+}
+
+@media (min-width: $largedevices) {
+	.lightbox__container {
+		img,
+		video {
+			height: 550px;
+			width: 1000px;
+		}
+	}
+}

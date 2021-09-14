@@ -1,0 +1,44 @@
+ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+}
+
+figure {
+	margin: 0;
+}
+
+
+.focus__element:focus {
+	border: 2px solid $oldbrick;
+	border-radius: 5px;
+}
+
+.focus__element-secondary:focus {
+	border: 2px solid $flamepea;
+	border-radius: 5px;
+}
+
+.skip-link {
+	transition: transform 0.3s;
+	background: $oldbrick;
+	color: #fff;
+	font-weight: 700;
+	left: 50%;
+	padding: 4px;
+	position: absolute;
+	transform: translateY(-300%);
+}
+
+.skip-link:focus {
+	transform: translateY(-100%);
+}
+
+.skip-link:focus-within {
+	transform: translateY(-100%);
+}
