@@ -1,0 +1,25 @@
+{
+  "name": "fisheye",
+  "version": "1.0.0",
+  "description": "Site pour les photographes freelance",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./sass/main.scss:./css/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Phenomenium/FishEye.git"
+  },
+  "author": "Aïssa Belguidoum",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Phenomenium/FishEye/issues"
+  },
+  "homepage": "https://github.com/Phenomenium/FishEye#readme",
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^4.31.0",
+    "@typescript-eslint/parser": "^4.31.0",
+    "eslint": "^7.32.0",
+    "eslint-plugin-react": "^7.25.1"
+  }
+}
